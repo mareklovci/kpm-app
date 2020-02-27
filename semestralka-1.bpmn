@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" id="Definitions_0ze3xzj" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="3.6.0">
+  <bpmn:collaboration id="Collaboration_138lk1c">
+    <bpmn:participant id="Participant_0xhnjhp" name="Děkanát" processRef="Process_0hzicsf" />
+  </bpmn:collaboration>
+  <bpmn:process id="Process_0hzicsf" isExecutable="true">
+    <bpmn:laneSet id="LaneSet_0620i4i">
+      <bpmn:lane id="Lane_01f0s9e" name="Referentka studijního oddělení" />
+      <bpmn:lane id="Lane_1dwi1gb" name="Proděkan pro vzdělávací činnost">
+        <bpmn:flowNodeRef>Task_1ylttjk</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>IntermediateThrowEvent_00g20r9</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_1egwx6k" name="Děkan" />
+      <bpmn:lane id="Lane_0y48ubp" name="Akademický senát" />
+    </bpmn:laneSet>
+    <bpmn:task id="Task_1ylttjk" />
+    <bpmn:boundaryEvent id="IntermediateThrowEvent_00g20r9" attachedToRef="Task_1ylttjk" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_138lk1c">
+      <bpmndi:BPMNShape id="Participant_0xhnjhp_di" bpmnElement="Participant_0xhnjhp" isHorizontal="true">
+        <dc:Bounds x="129" y="70" width="1151" height="770" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_01f0s9e_di" bpmnElement="Lane_01f0s9e" isHorizontal="true">
+        <dc:Bounds x="159" y="70" width="1121" height="194" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_1dwi1gb_di" bpmnElement="Lane_1dwi1gb" isHorizontal="true">
+        <dc:Bounds x="159" y="264" width="1121" height="196" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_1egwx6k_di" bpmnElement="Lane_1egwx6k" isHorizontal="true">
+        <dc:Bounds x="159" y="460" width="1121" height="120" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_0y48ubp_di" bpmnElement="Lane_0y48ubp" isHorizontal="true">
+        <dc:Bounds x="159" y="580" width="1121" height="260" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_1ylttjk_di" bpmnElement="Task_1ylttjk">
+        <dc:Bounds x="740" y="310" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BoundaryEvent_0s3anxd_di" bpmnElement="IntermediateThrowEvent_00g20r9">
+        <dc:Bounds x="792" y="372" width="36" height="36" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
